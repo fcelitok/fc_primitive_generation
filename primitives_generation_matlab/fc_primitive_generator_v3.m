@@ -5,7 +5,7 @@
 clear all;
 close all;
 
-steering_angle = 30;
+steering_angle = 50;
 wheelbase = 0.65;
 resolution = 0.05;
 
@@ -772,7 +772,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -804,7 +806,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -838,7 +842,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -870,7 +876,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -917,7 +925,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -949,7 +959,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -983,7 +995,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1016,7 +1030,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1063,7 +1079,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1095,7 +1113,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1129,7 +1149,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1161,7 +1183,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1209,7 +1233,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1241,7 +1267,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1275,7 +1303,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
@@ -1318,7 +1348,9 @@ for degree_number = 1:16
         straight_start_pose = [start_position straight_start_pose_theta];
 
         straight_end_pose_long = [end_pose(1) end_pose(2) angles(degree_number)];
-        [clotoid_check_straight_long, p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        [clotoid_check_straight_long, f_p_straight_long, L ] = clotoide(straight_end_pose_long, straight_start_pose, numberOfIntermediatePose, min_radius);
+        
+        p_straight_long = flip(f_p_straight_long);
         
         [primID, send_primitives] = primitive_function_2(straight_start_pose, straight_end_pose_long, p_straight_long, primID, resolution, long_bacward_penalty, angles, print_stuff);
         primitives(primID-1) = send_primitives(primID-1);
